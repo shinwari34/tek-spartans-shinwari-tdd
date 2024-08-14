@@ -29,7 +29,7 @@ public class Activity1 {
 
     @AfterMethod
     public void cleanupTest() {
-        driver.quit();
+       // driver.quit();
     }
 
 }
