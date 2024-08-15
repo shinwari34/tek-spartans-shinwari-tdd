@@ -26,6 +26,4 @@ public class BasicSetupTest extends UIBaseClass {
         boolean isEnabled = isElementEnabled(homePage.signInLink);
         Assert.assertTrue(isEnabled, "Sign in button should be enabled");
     }
-
-
 }
