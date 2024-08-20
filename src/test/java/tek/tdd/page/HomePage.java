@@ -3,7 +3,7 @@ package tek.tdd.page;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import utility.SeleniumUtility;
+import tek.tdd.utility.SeleniumUtility;
 
 public class HomePage extends SeleniumUtility {
 
