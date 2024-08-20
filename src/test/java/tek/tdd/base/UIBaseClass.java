@@ -7,7 +7,7 @@ import org.testng.annotations.BeforeMethod;
 import tek.tdd.page.HomePage;
 import tek.tdd.page.SignInPage;
 //import tek.tdd.utility.SeleniumUtility;
-import utility.SeleniumUtility;
+import tek.tdd.utility.SeleniumUtility;
 
 
 public class UIBaseClass extends SeleniumUtility {
@@ -16,6 +16,8 @@ public class UIBaseClass extends SeleniumUtility {
 
     public HomePage homePage;
     public SignInPage signInPage;
+    public SignUpPage signUpPage;
+    public AccountProfilePage accountProfilePage;
 
     @BeforeMethod
     public void setupTests() {
@@ -23,6 +25,8 @@ public class UIBaseClass extends SeleniumUtility {
         setupBrowser();
         homePage = new HomePage();
         signInPage = new SignInPage();
+        signUpPage = new SignUpPage();
+        accountProfilePage = new AccountProfilePage();
     }
 
     @AfterMethod
@@ -30,5 +34,6 @@ public class UIBaseClass extends SeleniumUtility {
         LOGGER.info("running after each test and quite browser");
         quitBrowser();
     }
+
 
 }
