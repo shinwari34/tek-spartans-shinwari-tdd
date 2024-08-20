@@ -4,9 +4,10 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import tek.tdd.page.AccountProfilePage;
 import tek.tdd.page.HomePage;
 import tek.tdd.page.SignInPage;
-//import tek.tdd.utility.SeleniumUtility;
+import tek.tdd.page.SignUpPage;
 import tek.tdd.utility.SeleniumUtility;
 
 
