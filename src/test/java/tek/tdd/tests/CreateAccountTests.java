@@ -14,7 +14,7 @@ public class CreateAccountTests extends UIBaseClass {
 
         String expectedEmail = DataGenerator.genereteRandomEmail("Mohammad");
 
-        signUpPage.fillUpCreateAccountForm("Mohammad",
+        signUpPage.fillUpCreateAccountForm("Shinwari",
                 expectedEmail,
                 "Password@123");
 
