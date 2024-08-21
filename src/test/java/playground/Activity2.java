@@ -36,7 +36,7 @@ public class Activity2 {
     @DataProvider(name = "positiveTestData")
     private String[][] positiveTestData() {
         String[][] data = {
-                {"najeebullah", "shinwari", "SHINWARI, Najeebullah" },
+                {"najeebullah", "shinwari", "SHINWARI, NAJEEBULLAH" },
                 {"JoHN", "SMITH", "SMITH, John" },
                 {" ALEN ", " smith ", "SMITH, Alen" },
 
@@ -65,5 +65,6 @@ public class Activity2 {
             getFullName("", "");
         });
     }
+
 
 }
