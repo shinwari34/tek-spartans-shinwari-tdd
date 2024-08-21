@@ -20,7 +20,7 @@ public class SecurityTest extends UIBaseClass {
         ExtentTestManager.getTest()
                 .info("Sign In with credential");
 
-        signInPage.doSignIn("mohammad2536@gmail.com", "Password@123");
+        signInPage.doSignIn("najeebullah@gmail.com", "Password@123");
         boolean isDisplayed = isElementDisplayed(homePage.accountLink);
 
         Assert.assertTrue(isDisplayed, "Looking for account Link to be displayed after login");
@@ -47,7 +47,7 @@ public class SecurityTest extends UIBaseClass {
         return new String[][]{
                 {"NoAVALIDEmail@email.com" , "Password@123"},
                 {"Nomail@gmail.com", "WrongPassword"},
-                {"shinwari@gmail.com" , "WrongPassword"},
+                {"najeebullah@gmail.com" , "WrongPassword"},
         };
     }
 }

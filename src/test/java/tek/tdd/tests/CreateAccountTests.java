@@ -38,7 +38,7 @@ public class CreateAccountTests extends UIBaseClass {
         clickOnElement(homePage.signInLink);
         clickOnElement(signInPage.createNewAccountLink);
 
-        signUpPage.fillUpCreateAccountForm("Mohammad", "mohammad2536@gmail.com", "Password!321");
+        signUpPage.fillUpCreateAccountForm("Najeebullah", "Najeebullah@gmail.com", "Password!321");
 
         String actualError = getElementText(signUpPage.signUpError);
 
