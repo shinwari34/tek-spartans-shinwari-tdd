@@ -1,9 +1,11 @@
 package tek.tdd.page;
 
+import com.aventstack.extentreports.service.ExtentTestManager;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import tek.tdd.utility.SeleniumUtility;
+
 
 public class SignInPage extends SeleniumUtility {
 
@@ -28,6 +30,8 @@ public class SignInPage extends SeleniumUtility {
 
 
     public void doSignIn(String email, String password) {
+        ExtentTestManager.getTest()
+                .info("Signin In with " + email + " And " + password);
         sendText(emailInput, email);
         sendText(passwordInput, password);
         clickOnElement(loginButton);
