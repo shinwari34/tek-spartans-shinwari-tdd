@@ -36,7 +36,7 @@ public class Activity2 {
     @DataProvider(name = "positiveTestData")
     private String[][] positiveTestData() {
         String[][] data = {
-                {"najeebullah", "shinwari", "SHINWARI, NAJEEBULLAH" },
+                {"shinwari", "najeebullah", "NAJEEBULAH, SHINWARI" },
                 {"JoHN", "SMITH", "SMITH, John" },
                 {" ALEN ", " smith ", "SMITH, Alen" },
 
