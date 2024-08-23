@@ -9,10 +9,10 @@ import tek.tdd.base.UIBaseClass;
 public class SecurityTest extends UIBaseClass {
 
     /*
-   User Story 1
-   Navigate to sign in page and sing in with valid username and password.
-   Validate user successfully signed in.
-    */
+     User Story 1
+     Navigate to sign in page and sing in with valid username and password.
+     Validate user successfully signed in.
+      */
     @Test
     public void validateSingIn() {
         clickOnElement(homePage.signInLink);
@@ -20,7 +20,7 @@ public class SecurityTest extends UIBaseClass {
         ExtentTestManager.getTest()
                 .info("Sign In with credential");
 
-        signInPage.doSignIn("najeebullah@gmail.com", "Password@123");
+        signInPage.doSignIn("najeebullah.shinwari34@gmail.com", "Password@123");
         boolean isDisplayed = isElementDisplayed(homePage.accountLink);
 
         Assert.assertTrue(isDisplayed, "Looking for account Link to be displayed after login");
@@ -31,7 +31,7 @@ public class SecurityTest extends UIBaseClass {
     Validate error message displays "wrong username or password"
     Story 3: Navigate to sign in page and sign in with valid user and invalid password
     Validate error message display  "wrong username or password"
-    push to your github account
+    push to your gitHub account
      */
     @Test(dataProvider = "InvalidTestData")
     public void negativeSignInTests(String email, String password) {
@@ -47,7 +47,7 @@ public class SecurityTest extends UIBaseClass {
         return new String[][]{
                 {"NoAVALIDEmail@email.com" , "Password@123"},
                 {"Nomail@gmail.com", "WrongPassword"},
-                {"najeebullah@gmail.com" , "WrongPassword"},
+                {"najeebullah.shinwari34@gmail.com" , "WrongPassword"},
         };
     }
 }
