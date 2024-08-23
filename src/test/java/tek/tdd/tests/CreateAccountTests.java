@@ -3,6 +3,7 @@ package tek.tdd.tests;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 import tek.tdd.base.UIBaseClass;
 import tek.tdd.utility.DataGenerator;
 
@@ -16,9 +17,9 @@ public class CreateAccountTests extends UIBaseClass {
         clickOnElement(homePage.signInLink);
         clickOnElement(signInPage.createNewAccountLink);
 
-        String expectedEmail = DataGenerator.generateRandomEmail("Shinwari");
+        String expectedEmail = DataGenerator.generateRandomEmail("Mohammad");
 
-        signUpPage.fillUpCreateAccountForm("Shinwari",
+        signUpPage.fillUpCreateAccountForm("Mohammad",
                 expectedEmail,
                 "Password@123");
 
@@ -38,7 +39,7 @@ public class CreateAccountTests extends UIBaseClass {
         clickOnElement(homePage.signInLink);
         clickOnElement(signInPage.createNewAccountLink);
 
-        signUpPage.fillUpCreateAccountForm("Najeebullah", "najeebullah.shinwari34@gmail.com", "Password!321");
+        signUpPage.fillUpCreateAccountForm("Mohammad", "mohammad2536@gmail.com", "Password!321");
 
         String actualError = getElementText(signUpPage.signUpError);
 
@@ -81,21 +82,25 @@ public class CreateAccountTests extends UIBaseClass {
         //Get List of All Error Elements
         //Loop through and validate
 
+        SoftAssert softAssert = new SoftAssert();
+
         List<String> expectedError = Arrays.asList(
                 "Name is a required field",
                 "Email is a required field" ,
                 "Password is a required field" ,
                 "Confirm Password is a required field");
 
-        List<WebElement> actualErrorElements = signUpPage.fieldErrors;
+        List< WebElement> actualErrorElements = signUpPage.fieldErrors;
 
-        Assert.assertEquals(actualErrorElements.size(), expectedError.size());
+        softAssert.assertEquals(actualErrorElements.size(), expectedError.size());
 
         for (int i = 0; i < expectedError.size(); i++) {
-            Assert.assertEquals(
+            softAssert.assertEquals(
                     getElementText(actualErrorElements.get(i)),
                     expectedError.get(i)
             );
         }
+
+        softAssert.assertAll();
     }
 }
