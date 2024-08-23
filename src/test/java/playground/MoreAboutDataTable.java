@@ -18,7 +18,7 @@ public class MoreAboutDataTable {
         Object[][] data = {
                 {"Ali", 3},
                 {"Alen", 4},
-                {"Mohammad", 8}
+                {"Najeebullah", 8}
         };
         return data;
     }
